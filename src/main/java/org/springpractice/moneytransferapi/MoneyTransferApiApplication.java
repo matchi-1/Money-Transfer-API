@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MoneyTransferApiApplication {
 
     public static void main(String[] args) {
+        System.out.println("DB URL = " + System.getenv("DB_URL"));
         SpringApplication.run(MoneyTransferApiApplication.class, args);
     }
 
