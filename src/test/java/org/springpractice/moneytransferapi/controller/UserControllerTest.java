@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(UserController.class)
-@Import(UserControllerTest.MockedServiceConfig.class)  // 👈 inject mock via config
+@Import(UserControllerTest.MockedServiceConfig.class)
 class UserControllerTest {
 
     @TestConfiguration
