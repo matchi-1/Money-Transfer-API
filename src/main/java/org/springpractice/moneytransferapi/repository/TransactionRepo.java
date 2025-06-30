@@ -5,4 +5,5 @@ import org.springpractice.moneytransferapi.entity.Transaction;
 
 
 public interface TransactionRepo extends JpaRepository<Transaction,Long> {
+
 }
