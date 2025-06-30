@@ -1,0 +1,85 @@
+package org.springpractice.moneytransferapi.service;
+
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springpractice.moneytransferapi.entity.Transaction;
+import org.springpractice.moneytransferapi.entity.User;
+import org.springpractice.moneytransferapi.enums.TransactionStatus;
+import org.springpractice.moneytransferapi.repository.TransactionRepo;
+import org.springpractice.moneytransferapi.repository.UserRepo;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Service
+@Transactional
+public class TransactionService {
+    private final TransactionRepo transactionRepo;
+    private final UserRepo userRepo;
+
+    @Autowired
+    public TransactionService(TransactionRepo transactionRepo, UserRepo userRepo) {
+        this.transactionRepo = transactionRepo;
+        this.userRepo = userRepo;
+    }
+
+    public Transaction transfer(Long senderID, Long receiverID, BigDecimal amount, String description) {
+        Transaction transaction = new Transaction();
+        transaction.setCreatedAt(LocalDateTime.now());
+        transaction.setAmount(amount);
+        transaction.setDescription(description);
+        transaction.setStatus(TransactionStatus.PENDING);
+
+        try {
+            // check if sender and receiver ID exists
+            User sender =  userRepo.findById(senderID)
+                    .orElseThrow(() -> new IllegalArgumentException("Sender not found with id: " + senderID));
+            transaction.setSender(sender);
+            User receiver = userRepo.findById(receiverID)
+                    .orElseThrow(() -> new IllegalArgumentException("Receiver not found with id: " + receiverID));
+            transaction.setReceiver(receiver);
+
+            // check sender balance if it's enough to make the transaction
+            if (sender.getBalance().compareTo(amount) < 0) { // returns -1 if balance is less than amount
+                throw new IllegalArgumentException("Sender balance is less than amount to transfer.");
+            }
+
+            if (amount.compareTo(BigDecimal.ZERO) <= 0) {
+                throw new IllegalArgumentException("Insufficient balance. Available: " + sender.getBalance() + ", Required: " + amount);
+            }
+
+            // update balance (subtract from sender, add to receiver)
+            sender.setBalance(sender.getBalance().subtract(amount));
+            receiver.setBalance(receiver.getBalance().add(amount));
+
+            // save updates
+            userRepo.save(sender);
+            userRepo.save(receiver);
+
+            // update status to success
+            transaction.setStatus(TransactionStatus.SUCCESS);
+
+        } catch(IllegalArgumentException e){
+            transaction.setStatus(TransactionStatus.FAILED);
+            throw e;
+
+        } finally {
+            transactionRepo.save(transaction);
+        }
+
+        return transaction;
+    }
+
+    public List<Transaction> getAllTransactions() {
+        return transactionRepo.findAll();
+    }
+
+    public Transaction getTransactionById(Long id) {
+        return transactionRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Transaction not found with id: " + id));
+    }
+
+}
+

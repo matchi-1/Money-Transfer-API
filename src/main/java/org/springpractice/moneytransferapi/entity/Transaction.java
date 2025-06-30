@@ -4,6 +4,7 @@ package org.springpractice.moneytransferapi.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springpractice.moneytransferapi.enums.TransactionStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -20,15 +21,16 @@ public class Transaction {
 
     private String description;
 
-    private String status;
+    @Enumerated(EnumType.STRING) // save enum as string
+    private TransactionStatus status;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    // ManyToOne = Each Transaction is associated with one User (the sender).
-    // But a User can be associated with many transactions.
+    // ManyToOne = each Transaction is associated with one User (the sender).
+    // but a User can be associated with many transactions.
 
-    // JoinColumn = Use the database column sender_id in the transactions table
+    // JoinColumn = use the database column sender_id in the transactions table
     // to store the foreign key that links to users.id
 
     @ManyToOne
