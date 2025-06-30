@@ -43,11 +43,11 @@ public class TransactionService {
 
             // check sender balance if it's enough to make the transaction
             if (sender.getBalance().compareTo(amount) < 0) { // returns -1 if balance is less than amount
-                throw new IllegalArgumentException("Sender balance is less than amount to transfer.");
+                throw new IllegalArgumentException("Insufficient balance. Available: " + sender.getBalance() + ", Required: " + amount);
             }
 
             if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-                throw new IllegalArgumentException("Insufficient balance. Available: " + sender.getBalance() + ", Required: " + amount);
+                throw new IllegalArgumentException("Transfer amount must be greater than 0.");
             }
 
             // update balance (subtract from sender, add to receiver)
@@ -79,6 +79,14 @@ public class TransactionService {
     public Transaction getTransactionById(Long id) {
         return transactionRepo.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Transaction not found with id: " + id));
+    }
+
+    public List<Transaction> getTransactionsBySender(Long senderID) {
+        return transactionRepo.findBySenderId(senderID);
+    }
+
+    public List<Transaction> getTransactionsByReceiver(Long receiverID) {
+        return transactionRepo.findByReceiverId(receiverID);
     }
 
 }
