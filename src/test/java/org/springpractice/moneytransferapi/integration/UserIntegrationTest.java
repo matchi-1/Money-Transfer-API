@@ -38,4 +38,6 @@ class UserIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.email").value("eve@example.com"));
     }
+
+
 }
