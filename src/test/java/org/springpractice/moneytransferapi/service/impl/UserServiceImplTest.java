@@ -1,4 +1,4 @@
-package org.springpractice.moneytransferapi.service;
+package org.springpractice.moneytransferapi.service.impl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,13 +12,13 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class UserServiceTest {
+class UserServiceImplTest {
 
     @Mock
     private UserRepo userRepo;
 
     @InjectMocks
-    private UserService userService;
+    private UserServiceImpl userService;
 
     private User mockUser;
 
