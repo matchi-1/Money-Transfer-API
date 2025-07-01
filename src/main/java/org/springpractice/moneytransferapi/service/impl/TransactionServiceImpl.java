@@ -20,15 +20,14 @@ import java.util.List;
 public class TransactionServiceImpl implements TransactionService {
     private final TransactionRepo transactionRepo;
     private final UserRepo userRepo;
-    private final KafkaTemplate<String, Transaction> kafkaTemplate;
+    //private final KafkaTemplate<String, Transaction> kafkaTemplate;
 
     @Autowired
     public TransactionServiceImpl(TransactionRepo transactionRepo,
-                                  UserRepo userRepo,
-                                  KafkaTemplate<String, Transaction> kafkaTemplate) {
+                                  UserRepo userRepo) { // ,KafkaTemplate<String, Transaction> kafkaTemplate
         this.transactionRepo = transactionRepo;
         this.userRepo = userRepo;
-        this.kafkaTemplate = kafkaTemplate;
+        //this.kafkaTemplate = kafkaTemplate;
     }
 
     @Override public Transaction transfer(Long senderID, Long receiverID, BigDecimal amount, String description) {
@@ -73,7 +72,7 @@ public class TransactionServiceImpl implements TransactionService {
 
         } finally {
             transactionRepo.save(transaction);
-            kafkaTemplate.send("transaction-events", transaction); // async Kafka event
+            // kafkaTemplate.send("transaction-events", transaction); // async Kafka event
         }
 
         return transaction;

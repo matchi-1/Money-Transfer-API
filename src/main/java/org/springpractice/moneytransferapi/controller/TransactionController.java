@@ -1,6 +1,7 @@
 package org.springpractice.moneytransferapi.controller;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -17,7 +18,6 @@ import java.util.List;
 public class TransactionController {
     private final TransactionService transactionService;
 
-    @Autowired
     public TransactionController(TransactionService transactionService) {
         this.transactionService = transactionService;
     }
@@ -40,17 +40,17 @@ public class TransactionController {
 
     // GET user by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Transaction> getTransactionById(@PathVariable Long id) {
+    public ResponseEntity<Transaction> getTransactionById(@PathVariable @Min(1) Long id) {
         return ResponseEntity.ok(transactionService.getTransactionById(id));
     }
 
     @GetMapping("/sender/{id}")
-    public ResponseEntity<List<Transaction>> getBySender(@PathVariable Long id) {
+    public ResponseEntity<List<Transaction>> getBySender(@PathVariable @Min(1) Long id) {
         return ResponseEntity.ok(transactionService.getTransactionsBySender(id));
     }
 
     @GetMapping("/receiver/{id}")
-    public ResponseEntity<List<Transaction>> getByReceiver(@PathVariable Long id) {
+    public ResponseEntity<List<Transaction>> getByReceiver(@PathVariable @Min(1) Long id) {
         return ResponseEntity.ok(transactionService.getTransactionsByReceiver(id));
     }
 
