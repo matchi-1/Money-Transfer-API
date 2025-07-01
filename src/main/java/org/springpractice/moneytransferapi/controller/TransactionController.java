@@ -7,10 +7,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springpractice.moneytransferapi.dto.TransactionRequest;
 import org.springpractice.moneytransferapi.entity.Transaction;
-import org.springpractice.moneytransferapi.entity.User;
 import org.springpractice.moneytransferapi.service.TransactionService;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
