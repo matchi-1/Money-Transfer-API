@@ -12,11 +12,15 @@ import org.springpractice.moneytransferapi.service.TransactionService;
 @Service
 public class TransactionRequestListener {
 
-    @Autowired
-    private TransactionService transactionService;
+    private final TransactionService transactionService;
+    private final KafkaTemplate<String, TransactionResponseEvent> responseKafkaTemplate;
 
     @Autowired
-    private KafkaTemplate<String, TransactionResponseEvent> kafkaTemplate;
+    public TransactionRequestListener(TransactionService transactionService,
+                                      KafkaTemplate<String, TransactionResponseEvent> responseKafkaTemplate) {
+        this.transactionService = transactionService;
+        this.responseKafkaTemplate = responseKafkaTemplate;
+    }
 
     @KafkaListener(topics = "transaction-requests", groupId = "money-transfer")
     public void listen(TransactionRequestEvent event) {
@@ -36,6 +40,6 @@ public class TransactionRequestListener {
             response.setMessage(e.getMessage());
         }
 
-        kafkaTemplate.send("transaction-responses", response);
+        responseKafkaTemplate.send("transaction-responses", response);
     }
 }

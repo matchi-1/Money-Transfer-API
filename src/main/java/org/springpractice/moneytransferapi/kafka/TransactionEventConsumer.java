@@ -2,6 +2,7 @@ package org.springpractice.moneytransferapi.kafka;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
+import org.springpractice.moneytransferapi.dto.TransactionEventDTO;
 import org.springpractice.moneytransferapi.entity.Transaction;
 import org.springpractice.moneytransferapi.repository.TransactionRepo;
 
@@ -20,16 +21,16 @@ public class TransactionEventConsumer {
     }
 
     @KafkaListener(topics = "transaction-events", groupId = "money-transfer")
-    public void consume(Transaction transaction) {
-        Long txnId = transaction.getId();
+    public void consume(TransactionEventDTO eventDTO) {
+        Long txnId = eventDTO.getId();
 
         if (txnId == null || processedTransactions.containsKey(txnId)) {
             System.out.println("Duplicate or null transaction skipped: " + txnId);
             return;
         }
 
-        // simulate processing logic
-        System.out.println("Processing transaction: " + txnId);
+        System.out.println("Processing transaction event: " + eventDTO);
         processedTransactions.put(txnId, true);
     }
+
 }
