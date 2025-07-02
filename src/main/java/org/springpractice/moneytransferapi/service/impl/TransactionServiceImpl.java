@@ -75,19 +75,19 @@ public class TransactionServiceImpl implements TransactionService {
             throw e;
 
         } finally {
-            transactionRepo.save(transaction);
+            Transaction savedTransaction = transactionRepo.save(transaction);
 
             TransactionEventDTO eventDTO = new TransactionEventDTO(
-                    transaction.getId(),
-                    transaction.getAmount(),
-                    transaction.getDescription(),
-                    transaction.getStatus(),
-                    transaction.getCreatedAt(),
+                    savedTransaction.getId(),
+                    savedTransaction.getAmount(),
+                    savedTransaction.getDescription(),
+                    savedTransaction.getStatus(),
+                    savedTransaction.getCreatedAt(),
                     senderEmail,         // use pre-fetched emails
                     receiverEmail
             );
 
-            kafkaTemplate.send("transaction-events", transaction.getId().toString(), eventDTO);
+            kafkaTemplate.send("transaction-events", savedTransaction.getId().toString(), eventDTO);
         }
 
         return transaction;
