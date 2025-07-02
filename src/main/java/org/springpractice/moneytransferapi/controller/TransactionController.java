@@ -8,8 +8,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springpractice.moneytransferapi.dto.TransactionRequest;
 import org.springpractice.moneytransferapi.dto.TransactionResponse;
+import org.springpractice.moneytransferapi.dto.TransactionResponseEvent;
 import org.springpractice.moneytransferapi.entity.Transaction;
+import org.springpractice.moneytransferapi.enums.TransactionStatus;
 import org.springpractice.moneytransferapi.service.TransactionService;
+import org.springpractice.moneytransferapi.service.gateway.TransactionGatewayService;
 
 import java.util.List;
 
@@ -18,9 +21,12 @@ import java.util.List;
 @Validated
 public class TransactionController {
     private final TransactionService transactionService;
+    private final TransactionGatewayService gatewayService;
 
-    public TransactionController(TransactionService transactionService) {
+    public TransactionController(TransactionService transactionService,
+                                 TransactionGatewayService gatewayService) {
         this.transactionService = transactionService;
+        this.gatewayService = gatewayService;
     }
 
     // add transactions
@@ -36,7 +42,7 @@ public class TransactionController {
         response.setId(transaction.getId());
         response.setAmount(transaction.getAmount());
         response.setDescription(transaction.getDescription());
-        response.setStatus(transaction.getStatus().toString());
+        response.setStatus(TransactionStatus.valueOf(transaction.getStatus().toString()));
         response.setSenderEmail(transaction.getSender().getEmail());
         response.setReceiverEmail(transaction.getReceiver().getEmail());
         response.setCreatedAt(transaction.getCreatedAt());
@@ -67,4 +73,14 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.getTransactionsByReceiver(id));
     }
 
+    @PostMapping("/async")
+    public ResponseEntity<TransactionResponseEvent> asyncTransfer(@RequestBody TransactionRequest request) throws Exception {
+        TransactionResponseEvent response = gatewayService.initiateTransaction(
+                request.getSenderID(),
+                request.getReceiverID(),
+                request.getAmount(),
+                request.getDescription()
+        );
+        return ResponseEntity.ok(response);
+    }
 }
