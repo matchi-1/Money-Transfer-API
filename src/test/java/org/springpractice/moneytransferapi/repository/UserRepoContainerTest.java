@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
 @Testcontainers
-public class UserRepoIntegrationTest {
+public class UserRepoContainerTest {
 
     @Container
     static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15.3")
