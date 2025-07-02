@@ -20,3 +20,17 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+#  postgres:
+#    image: postgres:14
+#    ports:
+#      - "5432:5432"
+#    environment:
+#      POSTGRES_DB: moneydb
+#      POSTGRES_USER: moneyuser
+#      POSTGRES_PASSWORD: moneypass
+#    volumes:
+#      - pgdata:/var/lib/postgresql/data
+#
+#volumes:
+#  pgdata:

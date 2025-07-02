@@ -1,0 +1,609 @@
+INFO Test log 2025-07-02T19:06:57.9440659+08:00
+2025-07-02T19:14:30.002+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Starting MoneyTransferApiApplication using Java 24.0.1 with PID 1808 (D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API\target\classes started by matchi in D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API)
+2025-07-02T19:14:30.005+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T19:14:30.553+08:00  INFO 1808 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-02T19:14:30.602+08:00  INFO 1808 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2025-07-02T19:14:31.015+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T19:14:31.028+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T19:14:31.029+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T19:14:31.086+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T19:14:31.087+08:00  INFO 1808 --- [Money-Transfer-API] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1033 ms
+2025-07-02T19:14:31.223+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-02T19:14:31.299+08:00  INFO 1808 --- [Money-Transfer-API] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-02T19:14:31.334+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-02T19:14:31.593+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-02T19:14:31.623+08:00  INFO 1808 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-02T19:14:31.775+08:00  INFO 1808 --- [Money-Transfer-API] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@632241f5
+2025-07-02T19:14:31.776+08:00  INFO 1808 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-02T19:14:31.814+08:00  WARN 1808 --- [Money-Transfer-API] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-02T19:14:31.831+08:00  INFO 1808 --- [Money-Transfer-API] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-02T19:14:32.642+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-02T19:14:32.751+08:00  INFO 1808 --- [Money-Transfer-API] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-02T19:14:33.069+08:00  WARN 1808 --- [Money-Transfer-API] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-02T19:14:33.100+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-02T19:14:33.413+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T19:14:33.454+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-02T19:14:33.505+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-02T19:14:33.590+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-02T19:14:33.591+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-02T19:14:33.591+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1751454873589
+2025-07-02T19:14:33.593+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Subscribed to topic(s): transaction-responses
+2025-07-02T19:14:33.600+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-02T19:14:33.600+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-02T19:14:33.606+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-02T19:14:33.607+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-02T19:14:33.607+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1751454873606
+2025-07-02T19:14:33.607+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Subscribed to topic(s): transaction-events
+2025-07-02T19:14:33.608+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-02T19:14:33.608+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-02T19:14:33.614+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-02T19:14:33.614+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-02T19:14:33.614+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1751454873614
+2025-07-02T19:14:33.615+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Subscribed to topic(s): transaction-requests
+2025-07-02T19:14:33.622+08:00  INFO 1808 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Started MoneyTransferApiApplication in 4.031 seconds (process running for 4.647)
+2025-07-02T19:14:34.042+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-02T19:14:34.042+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-02T19:14:34.042+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-02T19:14:34.044+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:14:34.044+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:14:34.044+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:14:34.047+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] (Re-)joining group
+2025-07-02T19:14:34.047+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] (Re-)joining group
+2025-07-02T19:14:34.047+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] (Re-)joining group
+2025-07-02T19:14:34.064+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-2-eb81c680-080d-4a13-b04d-c591686baff5
+2025-07-02T19:14:34.064+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-1-19a86494-c11d-4214-9de7-28d3de0b17e6
+2025-07-02T19:14:34.064+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-3-4b20a01f-79b9-4b66-97f5-82848851137b
+2025-07-02T19:14:34.065+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] (Re-)joining group
+2025-07-02T19:14:34.065+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] (Re-)joining group
+2025-07-02T19:14:34.065+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] (Re-)joining group
+2025-07-02T19:14:37.072+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Successfully joined group with generation Generation{generationId=6, memberId='consumer-money-transfer-1-19a86494-c11d-4214-9de7-28d3de0b17e6', protocol='range'}
+2025-07-02T19:14:37.072+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Successfully joined group with generation Generation{generationId=6, memberId='consumer-money-transfer-2-eb81c680-080d-4a13-b04d-c591686baff5', protocol='range'}
+2025-07-02T19:14:37.072+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Successfully joined group with generation Generation{generationId=6, memberId='consumer-money-transfer-3-4b20a01f-79b9-4b66-97f5-82848851137b', protocol='range'}
+2025-07-02T19:14:37.088+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Finished assignment for group at generation 6: {consumer-money-transfer-1-19a86494-c11d-4214-9de7-28d3de0b17e6=Assignment(partitions=[transaction-responses-0]), consumer-money-transfer-2-eb81c680-080d-4a13-b04d-c591686baff5=Assignment(partitions=[transaction-events-0]), consumer-money-transfer-3-4b20a01f-79b9-4b66-97f5-82848851137b=Assignment(partitions=[transaction-requests-0])}
+2025-07-02T19:14:37.096+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Successfully synced group in generation Generation{generationId=6, memberId='consumer-money-transfer-1-19a86494-c11d-4214-9de7-28d3de0b17e6', protocol='range'}
+2025-07-02T19:14:37.096+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Successfully synced group in generation Generation{generationId=6, memberId='consumer-money-transfer-2-eb81c680-080d-4a13-b04d-c591686baff5', protocol='range'}
+2025-07-02T19:14:37.096+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Successfully synced group in generation Generation{generationId=6, memberId='consumer-money-transfer-3-4b20a01f-79b9-4b66-97f5-82848851137b', protocol='range'}
+2025-07-02T19:14:37.097+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-responses-0])
+2025-07-02T19:14:37.097+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-events-0])
+2025-07-02T19:14:37.097+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-requests-0])
+2025-07-02T19:14:37.100+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Adding newly assigned partitions: transaction-responses-0
+2025-07-02T19:14:37.100+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Adding newly assigned partitions: transaction-requests-0
+2025-07-02T19:14:37.100+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Adding newly assigned partitions: transaction-events-0
+2025-07-02T19:14:37.121+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-responses-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-02T19:14:37.121+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-events-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-02T19:14:37.121+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-requests-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-02T19:14:37.122+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-events-0]
+2025-07-02T19:14:37.122+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-responses-0]
+2025-07-02T19:14:37.122+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-requests-0]
+2025-07-02T19:47:56.828+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T19:47:56.828+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T19:47:56.829+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.829+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.829+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T19:47:56.829+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T19:47:56.830+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T19:47:56.830+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.830+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T19:47:56.844+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.844+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T19:47:56.844+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.853+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.853+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T19:47:56.854+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.862+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.862+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T19:47:56.862+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.934+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.945+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:47:56.976+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T19:48:19.635+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m47s538ms585µs500ns).
+2025-07-02T20:14:02.676+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Disconnecting from node 1 due to request timeout.
+2025-07-02T20:14:02.677+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 7587 due to node 1 being disconnected (elapsed time since creation: 120061ms, elapsed time since send: 120061ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T20:14:02.678+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:14:02.679+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:14:02.679+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:14:02.678+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Error sending fetch request (sessionId=80616177, epoch=6466) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T20:14:02.706+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Disconnecting from node 1 due to request timeout.
+2025-07-02T20:14:02.706+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 7587 due to node 1 being disconnected (elapsed time since creation: 120091ms, elapsed time since send: 120091ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T20:14:02.706+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Error sending fetch request (sessionId=4923256, epoch=6466) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T20:14:02.706+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:14:02.706+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:14:02.706+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:14:02.748+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Disconnecting from node 1 due to request timeout.
+2025-07-02T20:14:02.749+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 7588 due to node 1 being disconnected (elapsed time since creation: 119986ms, elapsed time since send: 119986ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T20:14:02.749+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:14:02.749+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:14:02.749+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:14:02.749+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Error sending fetch request (sessionId=827657300, epoch=6466) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T20:14:02.893+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:14:02.909+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:14:02.947+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:14:04.586+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m14s799ms460µs200ns).
+2025-07-02T20:25:51.355+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Disconnecting from node 1 due to request timeout.
+2025-07-02T20:25:51.356+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 8504 due to node 1 being disconnected (elapsed time since creation: 318747ms, elapsed time since send: 318747ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T20:25:51.357+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Error sending fetch request (sessionId=1128585570, epoch=777) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T20:25:51.357+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:25:51.357+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:25:51.358+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:25:51.366+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Disconnecting from node 1 due to request timeout.
+2025-07-02T20:25:51.367+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 8503 due to node 1 being disconnected (elapsed time since creation: 318841ms, elapsed time since send: 318841ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T20:25:51.368+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Error sending fetch request (sessionId=770620220, epoch=777) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T20:25:51.369+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:25:51.370+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:25:51.371+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:25:51.408+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Disconnecting from node 1 due to request timeout.
+2025-07-02T20:25:51.411+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 8503 due to node 1 being disconnected (elapsed time since creation: 318882ms, elapsed time since send: 318882ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T20:25:51.415+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Error sending fetch request (sessionId=1763579817, epoch=777) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T20:25:51.415+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:25:51.415+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:25:51.415+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:25:51.575+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:25:51.577+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:25:51.585+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:25:51.970+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m47s369ms979µs400ns).
+2025-07-02T20:38:46.006+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:38:46.007+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:38:46.092+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:38:46.093+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:38:46.098+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:38:46.626+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m24s643ms446µs600ns).
+2025-07-02T20:52:19.127+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:52:19.127+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:52:19.128+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:52:19.128+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:52:19.128+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:52:19.128+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:52:19.128+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:52:19.128+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:52:19.129+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:52:19.221+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:52:19.225+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:52:19.235+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:52:44.509+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m57s872ms899µs500ns).
+2025-07-02T20:58:32.778+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:58:32.778+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:58:32.780+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:58:32.780+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:58:32.779+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:58:32.780+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:58:32.779+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T20:58:32.782+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:58:32.782+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T20:58:33.279+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:58:33.279+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:58:33.279+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T20:58:40.867+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s346ms861µs600ns).
+2025-07-02T21:04:59.808+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T21:04:59.808+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T21:04:59.808+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T21:04:59.808+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.808+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.808+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.809+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T21:04:59.809+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T21:04:59.809+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T21:04:59.811+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.811+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.811+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T21:04:59.811+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T21:04:59.811+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.811+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.912+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.913+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:04:59.914+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:05:03.353+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s477ms347µs600ns).
+2025-07-02T21:43:47.348+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-07-02T21:43:47.359+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:43:47.359+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T21:43:47.359+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:43:47.381+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-07-02T21:43:47.381+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-07-02T21:43:47.451+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:43:47.455+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:43:47.494+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T21:43:48.949+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m45s586ms779µs800ns).
+2025-07-02T22:18:21.128+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 13526 due to node 1 being disconnected (elapsed time since creation: 1594253ms, elapsed time since send: 1594253ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T22:18:21.133+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Error sending fetch request (sessionId=1785385121, epoch=4268) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T22:18:21.133+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T22:18:21.134+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:18:21.134+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T22:18:21.152+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 13525 due to node 1 being disconnected (elapsed time since creation: 1594278ms, elapsed time since send: 1594278ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T22:18:21.154+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Error sending fetch request (sessionId=1457673340, epoch=4268) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T22:18:21.155+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T22:18:21.155+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:18:21.155+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T22:18:21.216+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 13526 due to node 1 being disconnected (elapsed time since creation: 1594342ms, elapsed time since send: 1594342ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T22:18:21.216+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Error sending fetch request (sessionId=109339702, epoch=4268) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T22:18:21.217+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T22:18:21.217+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:18:21.217+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T22:18:21.379+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:18:21.412+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:18:21.443+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:18:21.760+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m2s794ms941µs300ns).
+2025-07-02T22:38:30.277+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 14297 due to node 1 being disconnected (elapsed time since creation: 881964ms, elapsed time since send: 881964ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T22:38:30.278+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Error sending fetch request (sessionId=837214606, epoch=652) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T22:38:30.279+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T22:38:30.279+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.279+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T22:38:30.456+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.525+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-07-02T22:38:30.525+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-07-02T22:38:30.528+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.528+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T22:38:30.528+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.530+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.530+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T22:38:30.531+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.625+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:30.635+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T22:38:32.455+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m10s687ms167µs700ns).
+2025-07-02T23:05:29.123+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 15067 due to node 1 being disconnected (elapsed time since creation: 1292070ms, elapsed time since send: 1292070ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T23:05:29.125+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Error sending fetch request (sessionId=1048526905, epoch=1304) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T23:05:29.125+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T23:05:29.125+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T23:05:29.125+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T23:05:29.139+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 15066 due to node 1 being disconnected (elapsed time since creation: 1292086ms, elapsed time since send: 1292086ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T23:05:29.140+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Error sending fetch request (sessionId=2134462086, epoch=1304) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T23:05:29.141+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T23:05:29.141+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T23:05:29.141+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T23:05:29.185+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cancelled in-flight FETCH request with correlation id 15067 due to node 1 being disconnected (elapsed time since creation: 1292297ms, elapsed time since send: 1292297ms, throttle time: 0ms, request timeout: 30000ms)
+2025-07-02T23:05:29.193+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Error sending fetch request (sessionId=287605407, epoch=651) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-07-02T23:05:29.193+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-07-02T23:05:29.193+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T23:05:29.193+08:00  INFO 1808 --- [Money-Transfer-API] [kafka-coordinator-heartbeat-thread | money-transfer] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Client requested disconnect from node 2147483646
+2025-07-02T23:05:29.326+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T23:05:29.326+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T23:05:29.365+08:00  INFO 1808 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-02T23:05:33.261+08:00  WARN 1808 --- [Money-Transfer-API] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m795ms300ns).
