@@ -74,7 +74,7 @@ public class TransactionController {
     }
 
     @PostMapping("/async")
-    public ResponseEntity<TransactionResponseEvent> asyncTransfer(@RequestBody TransactionRequest request) throws Exception {
+    public ResponseEntity<TransactionResponseEvent> asyncTransfer(@RequestBody TransactionRequest request)  {
         TransactionResponseEvent response = gatewayService.initiateTransaction(
                 request.getSenderID(),
                 request.getReceiverID(),
