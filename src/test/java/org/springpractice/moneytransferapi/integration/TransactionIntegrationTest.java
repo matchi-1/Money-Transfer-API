@@ -54,21 +54,21 @@ public class TransactionIntegrationTest {
 
     @BeforeEach
     void setup() {
-        userRepo.deleteAll(); // safe: deletes only from container
+        userRepo.deleteAll(); // deletes only from container
 
         User sender = new User();
         sender.setFirstName("Sender");
+        sender.setLastName("Smith");
         sender.setEmail("sender@example.com");
         sender.setBalance(new BigDecimal("1000"));
-        sender = userRepo.save(sender);
-        this.senderId = sender.getId();
+        userRepo.save(sender);
 
         User receiver = new User();
         receiver.setFirstName("Receiver");
+        receiver.setLastName("Johnson");
         receiver.setEmail("receiver@example.com");
         receiver.setBalance(new BigDecimal("100"));
-        receiver = userRepo.save(receiver);
-        this.receiverId = receiver.getId();
+        userRepo.save(receiver);
     }
 
     @Test
