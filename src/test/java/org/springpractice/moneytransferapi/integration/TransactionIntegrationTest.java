@@ -61,15 +61,18 @@ public class TransactionIntegrationTest {
         sender.setLastName("Smith");
         sender.setEmail("sender@example.com");
         sender.setBalance(new BigDecimal("1000"));
-        userRepo.save(sender);
+        sender = userRepo.save(sender); // assign persisted entity
+        senderId = sender.getId(); // store ID
 
         User receiver = new User();
         receiver.setFirstName("Receiver");
         receiver.setLastName("Johnson");
         receiver.setEmail("receiver@example.com");
         receiver.setBalance(new BigDecimal("100"));
-        userRepo.save(receiver);
+        receiver = userRepo.save(receiver);
+        receiverId = receiver.getId();
     }
+
 
     @Test
     void testTransferTransaction() throws Exception {
