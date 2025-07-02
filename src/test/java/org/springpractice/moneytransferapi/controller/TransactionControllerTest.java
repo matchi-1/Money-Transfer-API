@@ -4,9 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springpractice.moneytransferapi.dto.TransactionRequest;
+import org.springpractice.moneytransferapi.dto.TransactionResponseEvent;
 import org.springpractice.moneytransferapi.entity.Transaction;
+import org.springpractice.moneytransferapi.entity.User;
 import org.springpractice.moneytransferapi.enums.TransactionStatus;
 import org.springpractice.moneytransferapi.service.TransactionService;
+import org.springpractice.moneytransferapi.service.gateway.TransactionGatewayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -34,16 +37,17 @@ public class TransactionControllerTest {
         public TransactionService transactionService() {
             return Mockito.mock(TransactionService.class);
         }
+
+        @Bean
+        public TransactionGatewayService transactionGatewayService() {
+            return Mockito.mock(TransactionGatewayService.class);
+        }
     }
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
-    private TransactionService transactionService;
-
-    @Autowired
-    private ObjectMapper objectMapper;
+    @Autowired private MockMvc mockMvc;
+    @Autowired private TransactionService transactionService;
+    @Autowired private TransactionGatewayService transactionGatewayService;
+    @Autowired private ObjectMapper objectMapper;
 
     private Transaction sampleTransaction() {
         Transaction tx = new Transaction();
@@ -51,6 +55,17 @@ public class TransactionControllerTest {
         tx.setAmount(BigDecimal.valueOf(500));
         tx.setStatus(TransactionStatus.SUCCESS);
         tx.setCreatedAt(LocalDateTime.now());
+
+        User sender = new User();
+        sender.setId(1L);
+        sender.setEmail("sender@example.com");
+        tx.setSender(sender);
+
+        User receiver = new User();
+        receiver.setId(2L);
+        receiver.setEmail("receiver@example.com");
+        tx.setReceiver(receiver);
+
         return tx;
     }
 
@@ -110,5 +125,29 @@ public class TransactionControllerTest {
         mockMvc.perform(get("/api/transactions/receiver/2"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].status").value("SUCCESS"));
+    }
+
+    @Test
+    void testAsyncTransfer() throws Exception {
+        TransactionRequest request = new TransactionRequest();
+        request.setSenderID(1L);
+        request.setReceiverID(2L);
+        request.setAmount(BigDecimal.valueOf(500));
+        request.setDescription("Async test");
+
+        TransactionResponseEvent responseEvent = new TransactionResponseEvent();
+        responseEvent.setRequestId("req-123");
+        responseEvent.setStatus(TransactionStatus.valueOf("PENDING"));
+
+        when(transactionGatewayService.initiateTransaction(
+                anyLong(), anyLong(), any(BigDecimal.class), anyString()))
+                .thenReturn(responseEvent);
+
+        mockMvc.perform(post("/api/transactions/async")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.requestId").value("req-123"))
+                .andExpect(jsonPath("$.status").value("PENDING"));
     }
 }
