@@ -29,7 +29,7 @@ public class TransactionController {
         this.gatewayService = gatewayService;
     }
 
-    // add transactions
+    // add transactions -- synch
     @PostMapping
     public ResponseEntity<TransactionResponse> addTransaction(@Valid @RequestBody TransactionRequest request) {
         Transaction transaction = transactionService.transfer(
@@ -73,6 +73,8 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.getTransactionsByReceiver(id));
     }
 
+
+    // add transactions -- async
     @PostMapping("/async")
     public ResponseEntity<TransactionResponseEvent> asyncTransfer(@RequestBody TransactionRequest request)  {
         TransactionResponseEvent response = gatewayService.initiateTransaction(
