@@ -23,7 +23,7 @@ public class TransactionRequestListener {
     private final StringRedisTemplate redisTemplate;
 
     // redis key prefix
-    private static final String REQUEST_ID_PREFIX = "processed-request-id:";
+    private static final String REQUEST_ID_PREFIX = "idempotency:txn-request:";
 
     @Autowired
     public TransactionRequestListener(TransactionService transactionService,
