@@ -11,6 +11,7 @@ import org.springpractice.moneytransferapi.enums.TransactionStatus;
 import org.springpractice.moneytransferapi.repository.TransactionRepo;
 import org.springpractice.moneytransferapi.repository.UserRepo;
 import org.springpractice.moneytransferapi.service.fallback.FallbackTransactionLogger;
+import org.springpractice.moneytransferapi.service.notification.EmailService;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -29,6 +30,9 @@ class TransactionServiceImplTest {
     @Mock
     private FallbackTransactionLogger fallbackLogger;
 
+    @Mock
+    private EmailService emailService;
+
     @InjectMocks
     private TransactionServiceImpl transactionService;
 
@@ -44,11 +48,47 @@ class TransactionServiceImplTest {
     void setupUsers() {
         sender = new User();
         sender.setId(senderId);
+        sender.setFirstName("Alice");
+        sender.setEmail("alice@example.com");
         sender.setBalance(new BigDecimal("200.00"));
 
         receiver = new User();
         receiver.setId(receiverId);
+        receiver.setFirstName("Bob");
+        receiver.setEmail("bob@example.com");
         receiver.setBalance(new BigDecimal("50.00"));
+    }
+
+    @Test
+    void transfer_successfulTransaction_updatesBalancesAndSendsEmail() {
+        when(userRepo.findById(senderId)).thenReturn(Optional.of(sender));
+        when(userRepo.findById(receiverId)).thenReturn(Optional.of(receiver));
+        when(transactionRepo.save(any(Transaction.class))).thenAnswer(invocation -> invocation.getArgument(0));
+
+        Transaction txn = transactionService.transfer(senderId, receiverId, amount, description);
+
+        assertEquals(TransactionStatus.SUCCESS, txn.getStatus());
+        assertEquals(amount, txn.getAmount());
+        assertEquals(description, txn.getDescription());
+        assertEquals(new BigDecimal("100.00"), sender.getBalance());
+        assertEquals(new BigDecimal("150.00"), receiver.getBalance());
+
+        verify(userRepo).save(sender);
+        verify(userRepo).save(receiver);
+        verify(transactionRepo).save(any(Transaction.class));
+        verify(fallbackLogger, never()).logFailure(any());
+
+        verify(emailService).sendTransactionNotification(
+                eq("alice@example.com"),
+                contains("Money Sent"),
+                contains("You sent ₱100.00 to Bob")
+        );
+
+        verify(emailService).sendTransactionNotification(
+                eq("bob@example.com"),
+                contains("Money Received"),
+                contains("You received ₱100.00 from Alice")
+        );
     }
 
     @Test
