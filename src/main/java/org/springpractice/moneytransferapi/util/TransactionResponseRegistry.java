@@ -28,7 +28,7 @@ public class TransactionResponseRegistry {
 
     public CompletableFuture<TransactionResponseEvent> register(String requestId) {
         // initial status as placeholder
-        redisTemplate.opsForValue().set("txn:response:" + requestId, "PENDING", Duration.ofSeconds(60)); // Increased TTL
+        redisTemplate.opsForValue().set("txn:response:" + requestId, "PENDING", Duration.ofSeconds(20));
         return pollUntilComplete(requestId);
     }
 

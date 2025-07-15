@@ -87,7 +87,7 @@ public class TransactionServiceImpl implements TransactionService {
                     receiverEmail
             );
 
-            kafkaTemplate.send("transaction-events", savedTransaction.getId().toString(), eventDTO);
+            //kafkaTemplate.send("transaction-events", savedTransaction.getId().toString(), eventDTO);
         }
 
         return transaction;

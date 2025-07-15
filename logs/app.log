@@ -8484,3 +8484,1591 @@ Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 2d
 2025-07-15T12:33:32.597+08:00  INFO 32616 --- [Money-Transfer-API] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-15T12:33:32.601+08:00  INFO 32616 --- [Money-Transfer-API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-07-15T12:33:32.604+08:00  INFO 32616 --- [Money-Transfer-API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-15T12:33:36.661+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Starting MoneyTransferApiApplication using Java 24.0.1 with PID 54848 (D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API\target\classes started by matchi in D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API)
+2025-07-15T12:33:36.664+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-07-15T12:33:37.591+08:00  INFO 54848 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-15T12:33:37.595+08:00  INFO 54848 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15T12:33:37.800+08:00  INFO 54848 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 3 JPA repository interfaces.
+2025-07-15T12:33:37.828+08:00  INFO 54848 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-15T12:33:37.830+08:00  INFO 54848 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-15T12:33:37.852+08:00  INFO 54848 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.ProcessedRequestRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T12:33:37.854+08:00  INFO 54848 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.TransactionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T12:33:37.854+08:00  INFO 54848 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T12:33:37.855+08:00  INFO 54848 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-07-15T12:33:38.566+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-15T12:33:38.584+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-15T12:33:38.584+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-15T12:33:38.672+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-15T12:33:38.673+08:00  INFO 54848 --- [Money-Transfer-API] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1947 ms
+2025-07-15T12:33:39.097+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-15T12:33:39.201+08:00  INFO 54848 --- [Money-Transfer-API] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-15T12:33:39.245+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-15T12:33:39.618+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15T12:33:39.657+08:00  INFO 54848 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-15T12:33:39.956+08:00  INFO 54848 --- [Money-Transfer-API] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1aed6f0b
+2025-07-15T12:33:39.959+08:00  INFO 54848 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-15T12:33:39.999+08:00  WARN 54848 --- [Money-Transfer-API] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-15T12:33:40.022+08:00  INFO 54848 --- [Money-Transfer-API] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-15T12:33:41.217+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-15T12:33:41.388+08:00  INFO 54848 --- [Money-Transfer-API] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T12:33:42.265+08:00  WARN 54848 --- [Money-Transfer-API] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15T12:33:42.313+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-15T12:33:42.868+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-15T12:33:42.919+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-15T12:33:42.971+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T12:33:43.089+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T12:33:43.089+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T12:33:43.090+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752554023087
+2025-07-15T12:33:43.096+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Subscribed to topic(s): transaction-responses
+2025-07-15T12:33:43.109+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-15T12:33:43.111+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T12:33:43.127+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T12:33:43.128+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T12:33:43.129+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752554023127
+2025-07-15T12:33:43.129+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Subscribed to topic(s): transaction-events
+2025-07-15T12:33:43.132+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-15T12:33:43.132+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T12:33:43.149+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T12:33:43.150+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T12:33:43.150+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752554023149
+2025-07-15T12:33:43.150+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Subscribed to topic(s): transaction-requests
+2025-07-15T12:33:43.168+08:00  INFO 54848 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Started MoneyTransferApiApplication in 7.122 seconds (process running for 8.045)
+2025-07-15T12:33:43.868+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T12:33:43.868+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T12:33:43.868+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T12:33:43.870+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-15T12:33:43.870+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-15T12:33:43.870+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-15T12:33:43.874+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] (Re-)joining group
+2025-07-15T12:33:43.874+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] (Re-)joining group
+2025-07-15T12:33:43.874+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] (Re-)joining group
+2025-07-15T12:33:43.904+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-2-12199182-99b9-498e-9683-e0e7a61a3061
+2025-07-15T12:33:43.904+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-3-acde03ad-c5b8-40e1-b65f-f61ec35630f3
+2025-07-15T12:33:43.904+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-1-557a0979-005e-47aa-9f7c-6af88425ba9b
+2025-07-15T12:33:43.905+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] (Re-)joining group
+2025-07-15T12:33:43.905+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] (Re-)joining group
+2025-07-15T12:33:43.905+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] (Re-)joining group
+2025-07-15T12:33:46.910+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Successfully joined group with generation Generation{generationId=84, memberId='consumer-money-transfer-2-12199182-99b9-498e-9683-e0e7a61a3061', protocol='range'}
+2025-07-15T12:33:46.910+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Successfully joined group with generation Generation{generationId=84, memberId='consumer-money-transfer-3-acde03ad-c5b8-40e1-b65f-f61ec35630f3', protocol='range'}
+2025-07-15T12:33:46.910+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Successfully joined group with generation Generation{generationId=84, memberId='consumer-money-transfer-1-557a0979-005e-47aa-9f7c-6af88425ba9b', protocol='range'}
+2025-07-15T12:33:46.935+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Finished assignment for group at generation 84: {consumer-money-transfer-3-acde03ad-c5b8-40e1-b65f-f61ec35630f3=Assignment(partitions=[transaction-requests-0]), consumer-money-transfer-2-12199182-99b9-498e-9683-e0e7a61a3061=Assignment(partitions=[transaction-events-0]), consumer-money-transfer-1-557a0979-005e-47aa-9f7c-6af88425ba9b=Assignment(partitions=[transaction-responses-0])}
+2025-07-15T12:33:46.946+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Successfully synced group in generation Generation{generationId=84, memberId='consumer-money-transfer-3-acde03ad-c5b8-40e1-b65f-f61ec35630f3', protocol='range'}
+2025-07-15T12:33:46.946+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Successfully synced group in generation Generation{generationId=84, memberId='consumer-money-transfer-1-557a0979-005e-47aa-9f7c-6af88425ba9b', protocol='range'}
+2025-07-15T12:33:46.946+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Successfully synced group in generation Generation{generationId=84, memberId='consumer-money-transfer-2-12199182-99b9-498e-9683-e0e7a61a3061', protocol='range'}
+2025-07-15T12:33:46.946+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-requests-0])
+2025-07-15T12:33:46.946+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-responses-0])
+2025-07-15T12:33:46.946+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-events-0])
+2025-07-15T12:33:46.950+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Adding newly assigned partitions: transaction-requests-0
+2025-07-15T12:33:46.950+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Adding newly assigned partitions: transaction-responses-0
+2025-07-15T12:33:46.950+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Adding newly assigned partitions: transaction-events-0
+2025-07-15T12:33:46.973+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-requests-0 to the committed offset FetchPosition{offset=8, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-15T12:33:46.973+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-events-0 to the committed offset FetchPosition{offset=23, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-15T12:33:46.973+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-responses-0 to the committed offset FetchPosition{offset=8, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-15T12:33:46.975+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-responses-0]
+2025-07-15T12:33:46.975+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-events-0]
+2025-07-15T12:33:46.976+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-requests-0]
+2025-07-15T13:06:10.710+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15T13:06:10.710+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-15T13:06:10.713+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-15T13:06:11.138+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Money-Transfer-API-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-07-15T13:06:11.139+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T13:06:11.155+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Instantiated an idempotent producer.
+2025-07-15T13:06:11.174+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T13:06:11.174+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T13:06:11.174+08:00  INFO 54848 --- [Money-Transfer-API] [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752555971174
+2025-07-15T13:06:11.189+08:00  INFO 54848 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Money-Transfer-API-producer-1] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T13:06:11.199+08:00  INFO 54848 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Money-Transfer-API-producer-1] ProducerId set to 3010 with epoch 0
+2025-07-15T13:06:11.452+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Money-Transfer-API-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-07-15T13:06:11.452+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T13:06:11.453+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Instantiated an idempotent producer.
+2025-07-15T13:06:11.458+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : The mbean of App info: [kafka.producer], id: [Money-Transfer-API-producer-1] already exists, so skipping a new mbean creation.
+2025-07-15T13:06:11.469+08:00  INFO 54848 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Money-Transfer-API-producer-1] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T13:06:11.469+08:00  INFO 54848 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Money-Transfer-API-producer-1] ProducerId set to 3011 with epoch 0
+2025-07-15T13:06:11.509+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Money-Transfer-API-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-07-15T13:06:11.509+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T13:06:11.510+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Instantiated an idempotent producer.
+2025-07-15T13:06:11.515+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : The mbean of App info: [kafka.producer], id: [Money-Transfer-API-producer-1] already exists, so skipping a new mbean creation.
+2025-07-15T13:06:11.523+08:00  INFO 54848 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Money-Transfer-API-producer-1] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T13:06:11.524+08:00  INFO 54848 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Money-Transfer-API-producer-1] ProducerId set to 3012 with epoch 0
+2025-07-15T14:00:46.884+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Revoke previously assigned partitions transaction-responses-0
+2025-07-15T14:00:46.884+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Revoke previously assigned partitions transaction-requests-0
+2025-07-15T14:00:46.884+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Revoke previously assigned partitions transaction-events-0
+2025-07-15T14:00:46.890+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions revoked: [transaction-requests-0]
+2025-07-15T14:00:46.890+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions revoked: [transaction-events-0]
+2025-07-15T14:00:46.890+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions revoked: [transaction-responses-0]
+2025-07-15T14:00:46.892+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Member consumer-money-transfer-2-12199182-99b9-498e-9683-e0e7a61a3061 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-07-15T14:00:46.892+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Member consumer-money-transfer-3-acde03ad-c5b8-40e1-b65f-f61ec35630f3 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-07-15T14:00:46.892+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Member consumer-money-transfer-1-557a0979-005e-47aa-9f7c-6af88425ba9b sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-07-15T14:00:46.893+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.893+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.894+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.894+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.894+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Unsubscribed all topics or patterns and assigned partitions
+2025-07-15T14:00:46.894+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Unsubscribed all topics or patterns and assigned partitions
+2025-07-15T14:00:46.895+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.895+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.896+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Unsubscribed all topics or patterns and assigned partitions
+2025-07-15T14:00:46.901+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.901+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.901+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.901+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.902+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.902+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:00:46.929+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:00:46.929+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:00:46.930+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:00:46.930+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:00:46.930+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:00:46.931+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:00:46.931+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:00:46.931+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:00:46.941+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-money-transfer-2 unregistered
+2025-07-15T14:00:46.942+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-money-transfer-1 unregistered
+2025-07-15T14:00:46.943+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: Consumer stopped
+2025-07-15T14:00:46.943+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: Consumer stopped
+2025-07-15T14:00:47.226+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:00:47.226+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:00:47.226+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:00:47.226+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:00:47.229+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-money-transfer-3 unregistered
+2025-07-15T14:00:47.229+08:00  INFO 54848 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: Consumer stopped
+2025-07-15T14:00:47.232+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15T14:00:47.243+08:00  INFO 54848 --- [Money-Transfer-API] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-15T14:00:47.266+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-15T14:00:47.270+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:00:47.271+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:00:47.271+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:00:47.271+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:00:47.271+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for Money-Transfer-API-producer-1 unregistered
+2025-07-15T14:00:47.272+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-15T14:00:47.276+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:00:47.276+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:00:47.276+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:00:47.276+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:00:47.276+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for Money-Transfer-API-producer-1 unregistered
+2025-07-15T14:00:47.276+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-15T14:00:47.278+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:00:47.278+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:00:47.278+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:00:47.280+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:00:47.280+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for Money-Transfer-API-producer-1 unregistered
+2025-07-15T14:00:47.289+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:00:47.293+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-15T14:00:47.297+08:00  INFO 54848 --- [Money-Transfer-API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-15T14:00:54.685+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Starting MoneyTransferApiApplication using Java 24.0.1 with PID 38180 (D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API\target\classes started by matchi in D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API)
+2025-07-15T14:00:54.688+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-07-15T14:00:55.681+08:00  INFO 38180 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-15T14:00:55.683+08:00  INFO 38180 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15T14:00:55.911+08:00  INFO 38180 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216 ms. Found 3 JPA repository interfaces.
+2025-07-15T14:00:55.940+08:00  INFO 38180 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-15T14:00:55.942+08:00  INFO 38180 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-15T14:00:55.966+08:00  INFO 38180 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.ProcessedRequestRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T14:00:55.968+08:00  INFO 38180 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.TransactionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T14:00:55.969+08:00  INFO 38180 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T14:00:55.969+08:00  INFO 38180 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-07-15T14:00:56.736+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-15T14:00:56.757+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-15T14:00:56.758+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-15T14:00:56.843+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-15T14:00:56.844+08:00  INFO 38180 --- [Money-Transfer-API] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2081 ms
+2025-07-15T14:00:57.084+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-15T14:00:57.171+08:00  INFO 38180 --- [Money-Transfer-API] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-15T14:00:57.238+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-15T14:00:57.646+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15T14:00:57.701+08:00  INFO 38180 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-15T14:00:58.064+08:00  INFO 38180 --- [Money-Transfer-API] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@145a821d
+2025-07-15T14:00:58.068+08:00  INFO 38180 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-15T14:00:58.113+08:00  WARN 38180 --- [Money-Transfer-API] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-15T14:00:58.137+08:00  INFO 38180 --- [Money-Transfer-API] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-15T14:00:59.484+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-15T14:00:59.679+08:00  INFO 38180 --- [Money-Transfer-API] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:01:00.752+08:00  WARN 38180 --- [Money-Transfer-API] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15T14:01:00.804+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-15T14:01:01.561+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-15T14:01:01.619+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-15T14:01:01.688+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T14:01:01.839+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T14:01:01.840+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T14:01:01.840+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752559261837
+2025-07-15T14:01:01.846+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Subscribed to topic(s): transaction-responses
+2025-07-15T14:01:01.874+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-15T14:01:01.875+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T14:01:01.891+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T14:01:01.892+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T14:01:01.892+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752559261891
+2025-07-15T14:01:01.894+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Subscribed to topic(s): transaction-events
+2025-07-15T14:01:01.897+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-money-transfer-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = money-transfer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-15T14:01:01.898+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T14:01:01.912+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T14:01:01.913+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T14:01:01.913+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752559261912
+2025-07-15T14:01:01.914+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Subscribed to topic(s): transaction-requests
+2025-07-15T14:01:01.930+08:00  INFO 38180 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Started MoneyTransferApiApplication in 7.917 seconds (process running for 8.858)
+2025-07-15T14:01:02.625+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T14:01:02.625+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T14:01:02.625+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T14:01:02.627+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-15T14:01:02.627+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-15T14:01:02.627+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-07-15T14:01:02.631+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] (Re-)joining group
+2025-07-15T14:01:02.631+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] (Re-)joining group
+2025-07-15T14:01:02.631+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] (Re-)joining group
+2025-07-15T14:01:02.664+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-2-c1feef23-611f-4ee9-8b51-7dfd2a3b7191
+2025-07-15T14:01:02.664+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-3-5b4009d0-ac1e-4750-b11e-b732301ed4be
+2025-07-15T14:01:02.664+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: need to re-join with the given member-id: consumer-money-transfer-1-e22ffe03-6e8d-46a0-9223-28e69e0f743c
+2025-07-15T14:01:02.665+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] (Re-)joining group
+2025-07-15T14:01:02.665+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] (Re-)joining group
+2025-07-15T14:01:02.665+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] (Re-)joining group
+2025-07-15T14:01:05.678+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Successfully joined group with generation Generation{generationId=86, memberId='consumer-money-transfer-1-e22ffe03-6e8d-46a0-9223-28e69e0f743c', protocol='range'}
+2025-07-15T14:01:05.678+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Successfully joined group with generation Generation{generationId=86, memberId='consumer-money-transfer-3-5b4009d0-ac1e-4750-b11e-b732301ed4be', protocol='range'}
+2025-07-15T14:01:05.678+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Successfully joined group with generation Generation{generationId=86, memberId='consumer-money-transfer-2-c1feef23-611f-4ee9-8b51-7dfd2a3b7191', protocol='range'}
+2025-07-15T14:01:05.707+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Finished assignment for group at generation 86: {consumer-money-transfer-3-5b4009d0-ac1e-4750-b11e-b732301ed4be=Assignment(partitions=[transaction-requests-0]), consumer-money-transfer-1-e22ffe03-6e8d-46a0-9223-28e69e0f743c=Assignment(partitions=[transaction-responses-0]), consumer-money-transfer-2-c1feef23-611f-4ee9-8b51-7dfd2a3b7191=Assignment(partitions=[transaction-events-0])}
+2025-07-15T14:01:05.724+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Successfully synced group in generation Generation{generationId=86, memberId='consumer-money-transfer-3-5b4009d0-ac1e-4750-b11e-b732301ed4be', protocol='range'}
+2025-07-15T14:01:05.724+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Successfully synced group in generation Generation{generationId=86, memberId='consumer-money-transfer-2-c1feef23-611f-4ee9-8b51-7dfd2a3b7191', protocol='range'}
+2025-07-15T14:01:05.724+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Successfully synced group in generation Generation{generationId=86, memberId='consumer-money-transfer-1-e22ffe03-6e8d-46a0-9223-28e69e0f743c', protocol='range'}
+2025-07-15T14:01:05.724+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-requests-0])
+2025-07-15T14:01:05.724+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-events-0])
+2025-07-15T14:01:05.724+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Notifying assignor about the new Assignment(partitions=[transaction-responses-0])
+2025-07-15T14:01:05.730+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Adding newly assigned partitions: transaction-requests-0
+2025-07-15T14:01:05.730+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Adding newly assigned partitions: transaction-responses-0
+2025-07-15T14:01:05.730+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Adding newly assigned partitions: transaction-events-0
+2025-07-15T14:01:05.758+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-responses-0 to the committed offset FetchPosition{offset=12, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-15T14:01:05.758+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-requests-0 to the committed offset FetchPosition{offset=12, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-15T14:01:05.758+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition transaction-events-0 to the committed offset FetchPosition{offset=27, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-07-15T14:01:05.761+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-requests-0]
+2025-07-15T14:01:05.761+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-responses-0]
+2025-07-15T14:01:05.761+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions assigned: [transaction-events-0]
+2025-07-15T14:03:18.824+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15T14:03:18.825+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-15T14:03:18.827+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-15T14:03:19.299+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Money-Transfer-API-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-07-15T14:03:19.300+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T14:03:19.320+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Instantiated an idempotent producer.
+2025-07-15T14:03:19.344+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-15T14:03:19.344+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-15T14:03:19.344+08:00  INFO 38180 --- [Money-Transfer-API] [http-nio-8080-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752559399344
+2025-07-15T14:03:19.360+08:00  INFO 38180 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Money-Transfer-API-producer-1] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T14:03:19.364+08:00  INFO 38180 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Money-Transfer-API-producer-1] ProducerId set to 3013 with epoch 0
+2025-07-15T14:03:19.635+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Money-Transfer-API-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-07-15T14:03:19.636+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T14:03:19.637+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Instantiated an idempotent producer.
+2025-07-15T14:03:19.643+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : The mbean of App info: [kafka.producer], id: [Money-Transfer-API-producer-1] already exists, so skipping a new mbean creation.
+2025-07-15T14:03:19.654+08:00  INFO 38180 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Money-Transfer-API-producer-1] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T14:03:19.655+08:00  INFO 38180 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Money-Transfer-API-producer-1] ProducerId set to 3014 with epoch 0
+2025-07-15T14:03:19.665+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Money-Transfer-API-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-07-15T14:03:19.666+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-15T14:03:19.667+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Instantiated an idempotent producer.
+2025-07-15T14:03:19.674+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : The mbean of App info: [kafka.producer], id: [Money-Transfer-API-producer-1] already exists, so skipping a new mbean creation.
+2025-07-15T14:03:19.682+08:00  INFO 38180 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Money-Transfer-API-producer-1] Cluster ID: bbigAuR_QUyiuiFFCdKm5A
+2025-07-15T14:03:19.682+08:00  INFO 38180 --- [Money-Transfer-API] [kafka-producer-network-thread | Money-Transfer-API-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Money-Transfer-API-producer-1] ProducerId set to 3015 with epoch 0
+2025-07-15T14:42:04.634+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Revoke previously assigned partitions transaction-requests-0
+2025-07-15T14:42:04.634+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Revoke previously assigned partitions transaction-responses-0
+2025-07-15T14:42:04.634+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Revoke previously assigned partitions transaction-events-0
+2025-07-15T14:42:04.637+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions revoked: [transaction-responses-0]
+2025-07-15T14:42:04.637+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions revoked: [transaction-events-0]
+2025-07-15T14:42:04.637+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Member consumer-money-transfer-1-e22ffe03-6e8d-46a0-9223-28e69e0f743c sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-07-15T14:42:04.637+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Member consumer-money-transfer-2-c1feef23-611f-4ee9-8b51-7dfd2a3b7191 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-07-15T14:42:04.639+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.639+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.639+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Unsubscribed all topics or patterns and assigned partitions
+2025-07-15T14:42:04.641+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.643+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.643+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Unsubscribed all topics or patterns and assigned partitions
+2025-07-15T14:42:04.642+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.643+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-1, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.637+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: partitions revoked: [transaction-requests-0]
+2025-07-15T14:42:04.645+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Member consumer-money-transfer-3-5b4009d0-ac1e-4750-b11e-b732301ed4be sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-07-15T14:42:04.645+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.645+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.645+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Unsubscribed all topics or patterns and assigned partitions
+2025-07-15T14:42:04.646+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.646+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-2, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.646+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.647+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-money-transfer-3, groupId=money-transfer] Request joining group due to: consumer pro-actively leaving the group
+2025-07-15T14:42:04.855+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:42:04.856+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:42:04.857+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:42:04.857+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:42:04.862+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-money-transfer-1 unregistered
+2025-07-15T14:42:04.863+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: Consumer stopped
+2025-07-15T14:42:04.954+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:42:04.954+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:42:04.954+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:42:04.954+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:42:04.955+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:42:04.955+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:42:04.955+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:42:04.955+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:42:04.964+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-money-transfer-3 unregistered
+2025-07-15T14:42:04.964+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: Consumer stopped
+2025-07-15T14:42:04.966+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-money-transfer-2 unregistered
+2025-07-15T14:42:04.966+08:00  INFO 38180 --- [Money-Transfer-API] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : money-transfer: Consumer stopped
+2025-07-15T14:42:04.968+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15T14:42:04.979+08:00  INFO 38180 --- [Money-Transfer-API] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-15T14:42:04.996+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-15T14:42:05.001+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:42:05.001+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:42:05.002+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:42:05.002+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:42:05.002+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for Money-Transfer-API-producer-1 unregistered
+2025-07-15T14:42:05.003+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-15T14:42:05.008+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:42:05.008+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:42:05.008+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:42:05.008+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:42:05.008+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for Money-Transfer-API-producer-1 unregistered
+2025-07-15T14:42:05.008+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Money-Transfer-API-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-15T14:42:05.012+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-07-15T14:42:05.012+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-15T14:42:05.012+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-15T14:42:05.012+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-07-15T14:42:05.012+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for Money-Transfer-API-producer-1 unregistered
+2025-07-15T14:42:05.021+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:42:05.024+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-15T14:42:05.027+08:00  INFO 38180 --- [Money-Transfer-API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-15T14:44:59.534+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : Starting MoneyTransferApiApplication using Java 24.0.1 with PID 14084 (D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API\target\classes started by matchi in D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API)
+2025-07-15T14:44:59.537+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.s.m.MoneyTransferApiApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-07-15T14:45:00.449+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-15T14:45:00.452+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15T14:45:00.656+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 192 ms. Found 3 JPA repository interfaces.
+2025-07-15T14:45:00.685+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-15T14:45:00.686+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-15T14:45:00.708+08:00  INFO 14084 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.ProcessedRequestRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T14:45:00.710+08:00  INFO 14084 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.TransactionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T14:45:00.711+08:00  INFO 14084 --- [Money-Transfer-API] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springpractice.moneytransferapi.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-15T14:45:00.711+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-07-15T14:45:01.375+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-15T14:45:01.393+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-15T14:45:01.394+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-15T14:45:01.479+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-15T14:45:01.479+08:00  INFO 14084 --- [Money-Transfer-API] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1875 ms
+2025-07-15T14:45:01.698+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-15T14:45:01.757+08:00  INFO 14084 --- [Money-Transfer-API] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-15T14:45:01.810+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-15T14:45:02.174+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15T14:45:02.210+08:00  INFO 14084 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-15T14:45:02.446+08:00  INFO 14084 --- [Money-Transfer-API] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@403f7aa2
+2025-07-15T14:45:02.448+08:00  INFO 14084 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-15T14:45:02.487+08:00  WARN 14084 --- [Money-Transfer-API] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-15T14:45:02.509+08:00  INFO 14084 --- [Money-Transfer-API] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-15T14:45:03.723+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-15T14:45:03.917+08:00  INFO 14084 --- [Money-Transfer-API] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:45:04.738+08:00  WARN 14084 --- [Money-Transfer-API] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'transactionController' defined in file [D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API\target\classes\org\springpractice\moneytransferapi\controller\TransactionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'transactionServiceImpl': Unsatisfied dependency expressed through field 'self': Error creating bean with name 'transactionServiceImpl': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-07-15T14:45:04.753+08:00  INFO 14084 --- [Money-Transfer-API] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:45:04.756+08:00  INFO 14084 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-15T14:45:04.760+08:00  INFO 14084 --- [Money-Transfer-API] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-15T14:45:04.766+08:00  INFO 14084 --- [Money-Transfer-API] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-07-15T14:45:04.779+08:00  INFO 14084 --- [Money-Transfer-API] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-15T14:45:04.807+08:00 ERROR 14084 --- [Money-Transfer-API] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   transactionController defined in file [D:\Data\Projects\Java\Springboot-Practice\Money-Transfer-API\target\classes\org\springpractice\moneytransferapi\controller\TransactionController.class]
+┌─────┐
+|  transactionServiceImpl (field private org.springpractice.moneytransferapi.service.TransactionService org.springpractice.moneytransferapi.service.impl.TransactionServiceImpl.self)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+

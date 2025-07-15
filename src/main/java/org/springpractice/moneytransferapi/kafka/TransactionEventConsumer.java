@@ -29,17 +29,24 @@ public class TransactionEventConsumer {
     @KafkaListener(topics = "transaction-events", groupId = "money-transfer")
     public void consume(TransactionEventDTO eventDTO) {
         Long txnId = eventDTO.getId();
-        String key = PROCESSED_PREFIX + txnId;
-
-        Boolean alreadyProcessed = redisTemplate.hasKey(key);
-        if (txnId == null || alreadyProcessed) {
-            System.out.println("Duplicate or null transaction skipped: " + txnId);
+        if (txnId == null) {
+            System.out.println("Transaction with null ID skipped.");
             return;
         }
 
-        // process normally
+        String key = PROCESSED_PREFIX + txnId;
+
+        // atomically set the key ONLY if it does not already exist.
+        Boolean wasSet = redisTemplate.opsForValue().setIfAbsent(key, "true", Duration.ofMinutes(10));
+
+        // if 'wasSet' is false, it means the key already existed.
+        if (Boolean.FALSE.equals(wasSet)) {
+            System.out.println("Duplicate transaction skipped: " + txnId);
+            return;
+        }
+
+        // if we reach here, we are the first to process this event.
         System.out.println("Processing transaction event: " + eventDTO);
-        redisTemplate.opsForValue().set(key, "true", Duration.ofMinutes(10));  //  TTL
     }
 
 }
