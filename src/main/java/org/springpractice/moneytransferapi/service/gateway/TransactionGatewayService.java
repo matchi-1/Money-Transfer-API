@@ -41,10 +41,9 @@ public class TransactionGatewayService {
         try {
             return future.get(5, TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            registry.remove(requestId);
+            // timeout is from future.get()
             return new TransactionResponseEvent(requestId, TransactionStatus.FAILED, "Timed out waiting for response");
         } catch (Exception e) {
-            registry.remove(requestId);
             return new TransactionResponseEvent(requestId, TransactionStatus.FAILED, "Internal error: " + e.getMessage());
         }
     }
