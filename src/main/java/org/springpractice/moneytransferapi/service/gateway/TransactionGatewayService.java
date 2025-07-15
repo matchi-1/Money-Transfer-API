@@ -1,8 +1,11 @@
 package org.springpractice.moneytransferapi.service.gateway;
 
 import java.util.concurrent.TimeoutException;
+
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springpractice.moneytransferapi.dto.TransactionRequestEvent;
