@@ -7,6 +7,7 @@ import org.springpractice.moneytransferapi.entity.User;
 import org.springpractice.moneytransferapi.enums.TransactionStatus;
 import org.springpractice.moneytransferapi.repository.TransactionRepo;
 import org.springpractice.moneytransferapi.repository.UserRepo;
+import org.springpractice.moneytransferapi.service.notification.EmailService;
 import org.springpractice.moneytransferapi.service.TransactionService;
 import org.springpractice.moneytransferapi.service.fallback.FallbackTransactionLogger;
 
@@ -22,12 +23,17 @@ public class TransactionServiceImpl implements TransactionService {
     private final UserRepo userRepo;
     private final FallbackTransactionLogger fallbackLogger;
 
+
+    private final EmailService emailService;
+
     public TransactionServiceImpl(TransactionRepo transactionRepo,
                                   UserRepo userRepo,
-                                  FallbackTransactionLogger fallbackLogger) {
+                                  FallbackTransactionLogger fallbackLogger,
+                                  EmailService emailService) {
         this.transactionRepo = transactionRepo;
         this.userRepo = userRepo;
         this.fallbackLogger = fallbackLogger;
+        this.emailService = emailService;
     }
 
     @Override
@@ -65,6 +71,29 @@ public class TransactionServiceImpl implements TransactionService {
             userRepo.save(receiver);
 
             transaction.setStatus(TransactionStatus.SUCCESS);
+
+            try {
+                emailService.sendTransactionNotification(
+                        sender.getEmail(),
+                        "Money Sent - MoneyTransferAPI",
+                        "<p>Hi " + sender.getFirstName() + "!<br>" +
+                                "You sent ₱" + amount + " to " + receiver.getFirstName() + ".</p>"
+                );
+            } catch (Exception e) {
+                System.err.println("Failed to send email to sender: " + e.getMessage());
+            }
+
+            try {
+                emailService.sendTransactionNotification(
+                        receiver.getEmail(),
+                        "Money Received - MoneyTransferAPI",
+                        "<p>Hi " + receiver.getFirstName() + "!<br>" +
+                                "You received ₱" + amount + " from " + sender.getFirstName() + ".</p>"
+                );
+            } catch (Exception e) {
+                System.err.println("Failed to send email to receiver: " + e.getMessage());
+            }
+
             return transactionRepo.save(transaction);
 
         } catch (Exception e) {
