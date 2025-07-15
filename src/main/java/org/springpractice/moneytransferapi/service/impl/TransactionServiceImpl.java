@@ -79,6 +79,7 @@ public class TransactionServiceImpl implements TransactionService {
                         "<p>Hi " + sender.getFirstName() + "!<br>" +
                                 "You sent ₱" + amount + " to " + receiver.getFirstName() + ".</p>"
                 );
+                System.out.println("EMAIL RE:SENDING MONEY sent to: " +  sender.getEmail());
             } catch (Exception e) {
                 System.err.println("Failed to send email to sender: " + e.getMessage());
             }
@@ -90,6 +91,7 @@ public class TransactionServiceImpl implements TransactionService {
                         "<p>Hi " + receiver.getFirstName() + "!<br>" +
                                 "You received ₱" + amount + " from " + sender.getFirstName() + ".</p>"
                 );
+                System.out.println("EMAIL RE:RECEIVING MONEY sent to: " +  receiver.getEmail());
             } catch (Exception e) {
                 System.err.println("Failed to send email to receiver: " + e.getMessage());
             }
