@@ -18,10 +18,10 @@ public class RedisConnectionTest implements CommandLineRunner {
             String key = "ping";
             String value = "pong";
             redisTemplate.opsForValue().set(key, value);
-            System.out.println("Successfully set key '" + key + "' in Redis.");
+            System.out.println("successfully set key '" + key + "' in Redis.");
 
             String retrievedValue = redisTemplate.opsForValue().get(key);
-            System.out.println("Successfully retrieved value: '" + retrievedValue + "'");
+            System.out.println("successfully retrieved value: '" + retrievedValue + "'");
 
             if (value.equals(retrievedValue)) {
                 System.out.println(">>>>> REDIS CONNECTION SUCCESS!!!");
