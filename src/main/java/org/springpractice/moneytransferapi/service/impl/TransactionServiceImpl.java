@@ -56,7 +56,7 @@ public class TransactionServiceImpl implements TransactionService {
             if (sender.getBalance().compareTo(amount) < 0) {
                 transaction.setStatus(TransactionStatus.FAILED);
                 fallbackLogger.logFailure(transaction);
-                throw new IllegalArgumentException("Insufficient balance");
+                throw new IllegalArgumentException("Insufficient balance. Current balance: " + sender.getBalance() + ". Required balance: " + amount);
             }
 
             sender.setBalance(sender.getBalance().subtract(amount));
