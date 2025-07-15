@@ -28,7 +28,7 @@ public class TransactionResponseRegistry {
 
     public CompletableFuture<TransactionResponseEvent> register(String requestId) {
         // initial status as placeholder
-        redisTemplate.opsForValue().set("txn:response:" + requestId, "PENDING", Duration.ofSeconds(20));
+        redisTemplate.opsForValue().set("response:txn-request:" + requestId, "PENDING", Duration.ofSeconds(20));
         return pollUntilComplete(requestId);
     }
 
@@ -37,7 +37,7 @@ public class TransactionResponseRegistry {
         return CompletableFuture.supplyAsync(() -> {
             // poll for a result up to 50 times (50 * 100ms = 5 seconds)
             for (int i = 0; i < 50; i++) {
-                String json = redisTemplate.opsForValue().get("txn:response:" + requestId);
+                String json = redisTemplate.opsForValue().get("response:txn-request:" + requestId);
                 if (json != null && !"PENDING".equals(json)) {
                     try {
                         return objectMapper.readValue(json, TransactionResponseEvent.class);
@@ -62,7 +62,7 @@ public class TransactionResponseRegistry {
     public void complete(String requestId, TransactionResponseEvent response) {
         try {
             String json = objectMapper.writeValueAsString(response);
-            redisTemplate.opsForValue().set("txn:response:" + requestId, json, Duration.ofSeconds(60));
+            redisTemplate.opsForValue().set("response:txn-request:" + requestId, json, Duration.ofSeconds(60));
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Failed to serialize TransactionResponseEvent", e);
         }
