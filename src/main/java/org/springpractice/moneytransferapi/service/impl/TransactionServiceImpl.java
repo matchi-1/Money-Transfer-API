@@ -1,16 +1,14 @@
 package org.springpractice.moneytransferapi.service.impl;
 
-import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import org.springpractice.moneytransferapi.dto.TransactionEventDTO;
+import org.springframework.transaction.annotation.Transactional;
 import org.springpractice.moneytransferapi.entity.Transaction;
 import org.springpractice.moneytransferapi.entity.User;
 import org.springpractice.moneytransferapi.enums.TransactionStatus;
 import org.springpractice.moneytransferapi.repository.TransactionRepo;
 import org.springpractice.moneytransferapi.repository.UserRepo;
 import org.springpractice.moneytransferapi.service.TransactionService;
+import org.springpractice.moneytransferapi.service.fallback.FallbackTransactionLogger;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -19,17 +17,17 @@ import java.util.List;
 @Service
 @Transactional
 public class TransactionServiceImpl implements TransactionService {
+
     private final TransactionRepo transactionRepo;
     private final UserRepo userRepo;
-    private final KafkaTemplate<String, TransactionEventDTO> kafkaTemplate;
+    private final FallbackTransactionLogger fallbackLogger;
 
-    @Autowired
     public TransactionServiceImpl(TransactionRepo transactionRepo,
                                   UserRepo userRepo,
-                                  KafkaTemplate<String, TransactionEventDTO> kafkaTemplate) {
+                                  FallbackTransactionLogger fallbackLogger) {
         this.transactionRepo = transactionRepo;
         this.userRepo = userRepo;
-        this.kafkaTemplate = kafkaTemplate;
+        this.fallbackLogger = fallbackLogger;
     }
 
     @Override
@@ -40,58 +38,44 @@ public class TransactionServiceImpl implements TransactionService {
         transaction.setDescription(description);
         transaction.setStatus(TransactionStatus.PENDING);
 
-        String senderEmail = "";
-        String receiverEmail = "";
-
         try {
             User sender = userRepo.findById(senderID)
-                    .orElseThrow(() -> new IllegalArgumentException("Sender not found with id: " + senderID));
+                    .orElseThrow(() -> new IllegalArgumentException("Sender not found"));
             transaction.setSender(sender);
-            senderEmail = sender.getEmail();
 
             User receiver = userRepo.findById(receiverID)
-                    .orElseThrow(() -> new IllegalArgumentException("Receiver not found with id: " + receiverID));
+                    .orElseThrow(() -> new IllegalArgumentException("Receiver not found"));
             transaction.setReceiver(receiver);
-            receiverEmail = receiver.getEmail();
-
-            if (sender.getBalance().compareTo(amount) < 0) {
-                throw new IllegalArgumentException("Insufficient balance. Available: " + sender.getBalance() + ", Required: " + amount);
-            }
 
             if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-                throw new IllegalArgumentException("Transfer amount must be greater than 0.");
+                transaction.setStatus(TransactionStatus.FAILED);
+                fallbackLogger.logFailure(transaction);
+                throw new IllegalArgumentException("Amount must be greater than 0");
+            }
+
+            if (sender.getBalance().compareTo(amount) < 0) {
+                transaction.setStatus(TransactionStatus.FAILED);
+                fallbackLogger.logFailure(transaction);
+                throw new IllegalArgumentException("Insufficient balance");
             }
 
             sender.setBalance(sender.getBalance().subtract(amount));
             receiver.setBalance(receiver.getBalance().add(amount));
-
             userRepo.save(sender);
             userRepo.save(receiver);
 
             transaction.setStatus(TransactionStatus.SUCCESS);
+            return transactionRepo.save(transaction);
 
-        } catch (IllegalArgumentException e) {
-            transaction.setStatus(TransactionStatus.FAILED);
+        } catch (Exception e) {
+            if (transaction.getId() == null && transaction.getStatus() == TransactionStatus.PENDING) {
+                transaction.setStatus(TransactionStatus.FAILED);
+                fallbackLogger.logFailure(transaction);
+            }
             throw e;
-
-        } finally {
-            Transaction savedTransaction = transactionRepo.save(transaction);
-
-            TransactionEventDTO eventDTO = new TransactionEventDTO(
-                    savedTransaction.getId(),
-                    savedTransaction.getAmount(),
-                    savedTransaction.getDescription(),
-                    savedTransaction.getStatus(),
-                    savedTransaction.getCreatedAt(),
-                    senderEmail,         // use pre-fetched emails
-                    receiverEmail
-            );
-
-            //kafkaTemplate.send("transaction-events", savedTransaction.getId().toString(), eventDTO);
         }
-
-        return transaction;
     }
+
 
     @Override public List<Transaction> getAllTransactions() {
         return transactionRepo.findAll();
