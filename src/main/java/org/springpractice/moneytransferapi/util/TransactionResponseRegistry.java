@@ -6,7 +6,6 @@ import jakarta.annotation.PreDestroy;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springpractice.moneytransferapi.dto.TransactionResponseEvent;
 import org.springframework.stereotype.Component;
-import org.springpractice.moneytransferapi.enums.TransactionStatus;
 
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
@@ -35,7 +34,7 @@ public class TransactionResponseRegistry {
     private CompletableFuture<TransactionResponseEvent> pollUntilComplete(String requestId) {
         // CompletableFuture manages the asynchronous task
         return CompletableFuture.supplyAsync(() -> {
-            // poll for a result up to 50 times (50 * 100ms = 5 seconds)
+            // poll for a result up to 50 times (50 * 100ms time sleep = 5 seconds)
             for (int i = 0; i < 50; i++) {
                 String json = redisTemplate.opsForValue().get("response:txn-request:" + requestId);
                 if (json != null && !"PENDING".equals(json)) {
