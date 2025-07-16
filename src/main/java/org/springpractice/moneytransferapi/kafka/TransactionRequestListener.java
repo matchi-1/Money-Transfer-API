@@ -61,6 +61,7 @@ public class TransactionRequestListener {
                     event.getDescription()
             );
             response.setStatus(TransactionStatus.SUCCESS);
+            response.setMessage("Transaction successful");
         } catch (Exception e) {
             response.setStatus(TransactionStatus.FAILED);
             response.setMessage(e.getMessage());

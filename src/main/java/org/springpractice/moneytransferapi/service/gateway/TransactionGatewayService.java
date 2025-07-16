@@ -36,7 +36,7 @@ public class TransactionGatewayService {
         kafkaTemplate.send("transaction-requests", request);
 
         try {
-            return future.get(5, TimeUnit.SECONDS);
+            return future.get(10, TimeUnit.SECONDS);
         } catch (TimeoutException e) {
             // timeout is from future.get()
             return new TransactionResponseEvent(requestId, TransactionStatus.FAILED, "Timed out waiting for response");
