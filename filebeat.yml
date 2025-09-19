@@ -1,11 +1,12 @@
 filebeat.inputs:
-  - type: log
+  - type: filestream
+    id: app-logs
     enabled: true
     paths:
       - /app/logs/app.log
 
 output.elasticsearch:
-  hosts: ["https://elasticsearch:9200"]
-  username: "elastic"
-  password: "r_fV7lR2MyN+Jzcw-W-X"
-  ssl.verification_mode: none
+  hosts: ["${ELASTICSEARCH_HOST:https://elasticsearch:9200}"]
+  username: "${ELASTIC_USERNAME:elastic}"
+  password: "${ELASTIC_PASSWORD:}"
+  ssl.verification_mode: "${SSL_VERIFY_MODE:none}"

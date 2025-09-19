@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
@@ -20,3 +20,46 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.2
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=true
+      - xpack.security.http.ssl.verification_mode=none
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.13.2
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
+    environment:
+      - SERVER_NAME=kibana
+      - SERVER_HOST=0.0.0.0
+      - ELASTICSEARCH_HOSTS=["https://elasticsearch:9200"]
+      - ELASTICSEARCH_SERVICEACCOUNTTOKEN=${KIBANA_ES_SA_TOKEN}
+      - ELASTICSEARCH_SSL_VERIFICATIONMODE=none
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.13.2
+    user: root
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ${HOST_LOG_DIR}:/app/logs:ro
+      - filebeat-registry:/usr/share/filebeat/data
+    environment:
+      - ELASTICSEARCH_HOST=https://elasticsearch:9200
+      - ELASTIC_USERNAME=elastic
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - SSL_VERIFY_MODE=none
+    command: ["-e"]
+
+volumes:
+  filebeat-registry:

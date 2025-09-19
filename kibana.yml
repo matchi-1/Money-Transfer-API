@@ -1,6 +1,5 @@
 ﻿server.name: kibana
 server.host: "0.0.0.0"
-elasticsearch.hosts:
-  - "https://elasticsearch:9200"
-elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL2tpYmFuYS1zZXJ2aWNlLXRva2VuOjRwSUVkd1M0Uk9PQ3lsbnBBRk5uN0E"
+elasticsearch.hosts: ["${ELASTICSEARCH_HOSTS:https://elasticsearch:9200}"]
+elasticsearch.serviceAccountToken: ${ELASTICSEARCH_SERVICEACCOUNTTOKEN}
 elasticsearch.ssl.verificationMode: none

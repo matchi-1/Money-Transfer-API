@@ -23,7 +23,6 @@ public class TransactionServiceImpl implements TransactionService {
     private final UserRepo userRepo;
     private final FallbackTransactionLogger fallbackLogger;
 
-
     private final EmailService emailService;
 
     public TransactionServiceImpl(TransactionRepo transactionRepo,

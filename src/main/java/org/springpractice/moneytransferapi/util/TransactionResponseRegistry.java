@@ -54,7 +54,7 @@ public class TransactionResponseRegistry {
                 }
             }
             // if the loop finishes without a result, the request has timed out
-            throw new RuntimeException("Timed out");
+            throw new    RuntimeException("Timed out");
         }, pollingExecutor); // run on shared thread pool
     }
 
